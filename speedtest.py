@@ -1708,7 +1708,7 @@ def shell():
     if args.simple or args.csv or args.json:
         quiet = True
     else:
-        quiet = True
+        quiet = False
 
     if args.csv or args.json:
         machine_format = True
