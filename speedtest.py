@@ -1582,7 +1582,7 @@ def parse_args():
     parser.add_argument('--share', action='store_true',
                         help='Generate and provide a URL to the speedtest.net '
                              'share results image, not displayed with --csv')
-    parser.add_argument('--simple', action='store_true', default=False,
+    parser.add_argument('--simple', action='store_true', default=True,
                         help='Suppress verbose output, only show basic '
                              'information')
     parser.add_argument('--csv', action='store_true', default=False,
@@ -1708,7 +1708,7 @@ def shell():
     if args.simple or args.csv or args.json:
         quiet = True
     else:
-        quiet = True
+        quiet = False
 
     if args.csv or args.json:
         machine_format = True
